@@ -35,16 +35,6 @@ def health():
     return jsonify({'status': 'ok'})
 
 
-@app.route('/api/match', methods=['GET'])
-def test_match():
-    """Test endpoint - remove in production"""
-    return jsonify({
-        'message': 'API is working! Send a POST request with playlist_url and syllabus',
-        'example': {
-            'playlist_url': 'https://youtube.com/playlist?list=...',
-            'syllabus': 'Topic 1\nTopic 2\nTopic 3'
-        }
-    })
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
