@@ -66,7 +66,7 @@ class LectureMatcher:
         
         return videos
     
-    def match(self, topics, lectures, top_n=3, threshold=0.3):
+    def match(self, topics, lectures, top_n=10, threshold=0.3):
         """Match topics to lectures using embeddings"""
         print(f"Mathcing {len(topics)} topics to {len(lectures)} lectures...")
 
@@ -86,7 +86,7 @@ class LectureMatcher:
             for j, score in enumerate(similarities):
                 if score >= threshold:
                     matched_lectures.append({
-                    'lecture': lectures[i],
+                    'lecture': lectures[j],  
                     'score': float(score)
                 })
                     
