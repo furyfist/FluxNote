@@ -1,6 +1,6 @@
-# Lecture Matcher Frontend
+# FluxNote Frontend
 
-A modern React frontend application for matching YouTube playlist lectures with syllabus topics.
+A modern React + TypeScript frontend application for matching YouTube playlist lectures with syllabus topics.
 
 ## Features
 
@@ -10,6 +10,7 @@ A modern React frontend application for matching YouTube playlist lectures with 
 - ⚡ **Real-time Validation**: Instant form validation with helpful error messages
 - 🔍 **Score-based Results**: Color-coded similarity scores for easy interpretation
 - 🎓 **YouTube Integration**: Direct links to matched lectures
+- 🔒 **Type-Safe**: Built with TypeScript for enhanced reliability and developer experience
 
 ## Project Structure
 
@@ -21,33 +22,36 @@ frontend/
 ├── src/
 │   ├── components/
 │   │   ├── Form/
-│   │   │   ├── MatchForm.jsx       # Main form component
+│   │   │   ├── MatchForm.tsx       # Main form component
 │   │   │   └── MatchForm.css
 │   │   ├── Results/
-│   │   │   ├── ResultsDisplay.jsx  # Results container
-│   │   │   ├── TopicSection.jsx    # Individual topic section
-│   │   │   ├── LectureCard.jsx     # Lecture card with link
+│   │   │   ├── ResultsDisplay.tsx  # Results container
+│   │   │   ├── TopicSection.tsx    # Individual topic section
+│   │   │   ├── LectureCard.tsx     # Lecture card with link
 │   │   │   └── Results.css
 │   │   ├── UI/
-│   │   │   ├── LoadingSpinner.jsx  # Loading state
-│   │   │   ├── ErrorMessage.jsx    # Error display
-│   │   │   ├── ScoreBadge.jsx      # Score badge
+│   │   │   ├── LoadingSpinner.tsx  # Loading state
+│   │   │   ├── ErrorMessage.tsx    # Error display
+│   │   │   ├── ScoreBadge.tsx      # Score badge
 │   │   │   └── UI.css
 │   │   └── Layout/
-│   │       ├── Header.jsx          # App header
-│   │       ├── Footer.jsx          # App footer
+│   │       ├── Header.tsx          # App header
+│   │       ├── Footer.tsx          # App footer
 │   │       └── Layout.css
 │   ├── services/
-│   │   └── api.js                  # API service layer
+│   │   └── api.ts                  # API service layer
 │   ├── utils/
-│   │   └── validation.js           # Validation utilities
+│   │   └── validation.ts           # Validation utilities
+│   ├── types/
+│   │   └── index.ts                # TypeScript type definitions
 │   ├── styles/
 │   │   ├── variables.css           # CSS variables
 │   │   ├── global.css              # Global styles
 │   │   └── theme.css               # Theme styles
-│   ├── App.jsx                     # Main app component
+│   ├── App.tsx                     # Main app component
 │   ├── App.css
-│   └── index.js                    # Entry point
+│   └── index.tsx                   # Entry point
+├── tsconfig.json                   # TypeScript configuration
 ├── package.json
 └── README.md
 ```
@@ -121,10 +125,13 @@ The frontend connects to the backend API at `http://localhost:5000/api/match`
 
 ## Component Documentation
 
+All components are built with TypeScript for type safety and better developer experience.
+
 ### Form Component (`MatchForm`)
 - Handles user input for playlist URL and syllabus
-- Validates input before submission
+- Validates input before submission with TypeScript type checking
 - Shows loading state during API calls
+- Fully typed props and state
 
 ### Results Components
 - **ResultsDisplay**: Container for all results
@@ -135,6 +142,13 @@ The frontend connects to the backend API at `http://localhost:5000/api/match`
 - **LoadingSpinner**: Animated loading indicator
 - **ErrorMessage**: Error display with retry option
 - **ScoreBadge**: Color-coded score display (green/yellow/gray)
+
+### Type Definitions
+All TypeScript interfaces and types are defined in `src/types/index.ts`:
+- API request/response types
+- Component props interfaces
+- Form data types
+- Validation types
 
 ## Styling
 

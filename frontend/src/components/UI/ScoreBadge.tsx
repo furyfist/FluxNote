@@ -1,8 +1,9 @@
 import React from 'react';
 import { formatScore, getScoreCategory } from '../../utils/validation';
 import './UI.css';
+import { ScoreBadgeProps } from '../../types';
 
-const ScoreBadge = ({ score }) => {
+const ScoreBadge: React.FC<ScoreBadgeProps> = ({ score }) => {
     const category = getScoreCategory(score);
     const formattedScore = formatScore(score);
 

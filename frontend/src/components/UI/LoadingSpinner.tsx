@@ -1,7 +1,10 @@
 import React from 'react';
 import './UI.css';
+import { LoadingSpinnerProps } from '../../types';
 
-const LoadingSpinner = ({ message = 'Processing your request...' }) => {
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+    message = 'Processing your request...'
+}) => {
     return (
         <div className="loading-container fade-in">
             <div className="spinner-wrapper">

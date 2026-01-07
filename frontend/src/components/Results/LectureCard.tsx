@@ -1,8 +1,9 @@
 import React from 'react';
 import ScoreBadge from '../UI/ScoreBadge';
 import './Results.css';
+import { LectureCardProps } from '../../types';
 
-const LectureCard = ({ lecture, score }) => {
+const LectureCard: React.FC<LectureCardProps> = ({ lecture, score }) => {
     return (
         <div className="lecture-card">
             <div className="lecture-card-header">

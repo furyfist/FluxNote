@@ -1,8 +1,9 @@
 import React from 'react';
 import LectureCard from './LectureCard';
 import './Results.css';
+import { TopicSectionProps } from '../../types';
 
-const TopicSection = ({ topic, matches }) => {
+const TopicSection: React.FC<TopicSectionProps> = ({ topic, matches }) => {
     return (
         <div className="topic-section fade-in">
             <h3 className="topic-title">{topic}</h3>

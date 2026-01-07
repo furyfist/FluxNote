@@ -1,12 +1,12 @@
 import React from 'react';
 import './Layout.css';
 
-const Footer = () => {
+const Footer: React.FC = () => {
     return (
         <footer className="footer">
             <div className="container">
                 <p className="footer-text">
-                    © {new Date().getFullYear()} Lecture Matcher. Built with React.
+                    © {new Date().getFullYear()} FluxNote. Built with React & TypeScript.
                 </p>
             </div>
         </footer>

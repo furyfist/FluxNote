@@ -1,7 +1,8 @@
 import React from 'react';
 import './UI.css';
+import { ErrorMessageProps } from '../../types';
 
-const ErrorMessage = ({ message, onRetry }) => {
+const ErrorMessage: React.FC<ErrorMessageProps> = ({ message, onRetry }) => {
     return (
         <div className="error-container fade-in">
             <div className="error-icon">

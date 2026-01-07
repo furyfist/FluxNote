@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, FormEvent, ChangeEvent } from 'react';
 import { validateFormData } from '../../utils/validation';
 import './MatchForm.css';
+import { MatchFormProps, ValidationErrors } from '../../types';
 
-const MatchForm = ({ onSubmit, isLoading }) => {
-    const [playlistUrl, setPlaylistUrl] = useState('');
-    const [syllabus, setSyllabus] = useState('');
-    const [errors, setErrors] = useState({});
+const MatchForm: React.FC<MatchFormProps> = ({ onSubmit, isLoading }) => {
+    const [playlistUrl, setPlaylistUrl] = useState<string>('');
+    const [syllabus, setSyllabus] = useState<string>('');
+    const [errors, setErrors] = useState<ValidationErrors>({});
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         // Validate form data
@@ -23,19 +24,19 @@ const MatchForm = ({ onSubmit, isLoading }) => {
         onSubmit({ playlistUrl, syllabus });
     };
 
-    const handlePlaylistUrlChange = (e) => {
+    const handlePlaylistUrlChange = (e: ChangeEvent<HTMLInputElement>) => {
         setPlaylistUrl(e.target.value);
         // Clear error when user starts typing
         if (errors.playlistUrl) {
-            setErrors((prev) => ({ ...prev, playlistUrl: '' }));
+            setErrors((prev) => ({ ...prev, playlistUrl: undefined }));
         }
     };
 
-    const handleSyllabusChange = (e) => {
+    const handleSyllabusChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
         setSyllabus(e.target.value);
         // Clear error when user starts typing
         if (errors.syllabus) {
-            setErrors((prev) => ({ ...prev, syllabus: '' }));
+            setErrors((prev) => ({ ...prev, syllabus: undefined }));
         }
     };
 

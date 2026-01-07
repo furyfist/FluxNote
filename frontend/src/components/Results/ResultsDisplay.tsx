@@ -1,8 +1,9 @@
 import React from 'react';
 import TopicSection from './TopicSection';
 import './Results.css';
+import { ResultsDisplayProps } from '../../types';
 
-const ResultsDisplay = ({ results }) => {
+const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ results }) => {
     if (!results || results.length === 0) {
         return null;
     }
