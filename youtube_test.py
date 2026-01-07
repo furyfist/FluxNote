@@ -23,7 +23,7 @@ def get_playlist_videos(playlist_url):
         request = youtube.playlistItems().list(
             part='snippet',
             playlistId = playlist_id,
-            maxResults = 1000,
+            maxResults = 50,
             pageToken = next_page_token
         )
         response = request.execute()
