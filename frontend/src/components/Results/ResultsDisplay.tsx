@@ -11,13 +11,7 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ results }) => {
     return (
         <div className="results-container">
             <div className="results-header">
-                <h2 className="results-title">
-                    <span className="results-icon">✨</span>
-                    Matching Results
-                </h2>
-                <p className="results-subtitle">
-                    Found {results.length} topic{results.length !== 1 ? 's' : ''} with matching lectures
-                </p>
+                <h2 className="results-title">Your Curated Playlist</h2>
             </div>
 
             <div className="results-content">
