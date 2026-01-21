@@ -1,4 +1,4 @@
-import google.generativeai as genai
+from google import genai
 import os
 import json
 from typing import List, Dict, Any
@@ -21,10 +21,8 @@ class AIMatchingService:
         if not self.api_key:
             raise ValueError("Gemini API Key is not Found")
 
-        genai.configure(api_key=self.api_key)
-
-        # Use Gemini Pro Model
-        self.model = genai.GenerativeModel('gemini-pro')
+        # Initialize Gemini client 
+        self.client = genai.Client(api_key=self.api_key)
 
     def _build_prompt(self, syllabus_text: str, lectures: List[YouTubeVideo]) -> str:
         """
@@ -115,10 +113,11 @@ class AIMatchingService:
         prompt = self._build_prompt(syllabus_text, lectures)
 
         try:
-            # Call Gemini Api
-            response = self.model.generate_content(
-                prompt,
-                generation_config = genai.types.generationConfig(
+            # Call Gemini Api with new SDK
+            response = self.client.models.generate_content(
+                model='gemini-2.0-flash-exp',
+                contents=prompt,
+                config=genai.types.GenerateContentConfig(
                     temperature=0.2,
                     max_output_tokens=4096,
                 )
@@ -145,7 +144,7 @@ class AIMatchingService:
             for match in result.get('matches', []):
                 matched_lectures = []
 
-                for match in result.get('matched_lectures', []):
+                for lec in result.get('matched_lectures', []):
                     # Find the actual video by lecture number
                     lecture_num = lec.get('lecture_number', 0)
                     if 1 <= lecture_num <= len(lectures):
@@ -162,7 +161,7 @@ class AIMatchingService:
                     topic = match.get('topic', 'Unknown Topic'),
                     matched_lectures=matched_lectures
                 ))
-            return topic_mathces
+            return topic_matches
             
         except json.JSONDecodeError as e:
             raise ValueError(f"Failed to parse AI response as JSON: {str(e)}")
@@ -195,7 +194,10 @@ class AIMatchingService:
             }}"""
 
             try:
-                response = self.model.generate_content(prompt)
+                response = self.client.models.generate_content(
+                    model='gemini-2.0-flash-exp',
+                    contents=prompt
+                )
                 result = json.loads(response.text.strip())
                 return result
             except:

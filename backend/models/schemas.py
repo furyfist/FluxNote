@@ -46,7 +46,7 @@ class TopicMatch(BaseModel):
         description="List of relevent lectures for this topic"
     )
 
-class MathchResponse(BaseModel):
+class MatchResponse(BaseModel):
     """
     Complete response with all features
     """
@@ -54,16 +54,16 @@ class MathchResponse(BaseModel):
     total_topics: int = Field(..., description="Number of syllabus topics processed")
     total_lectures_fetched: int = Field(..., description="Total videos in playlist")
     matches: List[TopicMatch] = Field(..., description="Mathced topics and lectures")
-    message: Optinal[str] = Field(None, description="Additional message or info")
+    message: Optional[str] = Field(None, description="Additional message or info")
 
 # Youtube Service Models
 
-class YoutubeVideo(BaseModel):
+class YouTubeVideo(BaseModel):
     """
     Youtube Video Metadata
     """
-    titlle: str
-    video: str
+    title: str
+    video_id: str
     url: HttpUrl
     position: int = Field(..., description="Video position in playlist (1-indexed)")
 

@@ -141,7 +141,7 @@ class YouTubeService:
         playlist_id = self.extract_playlist_id(playlist_url)
 
         try:
-            request = self. extract_playlist().list(
+            request = self.youtube.playlists().list(
                 part = 'contentDetails',
                 id = playlist_id
             )
