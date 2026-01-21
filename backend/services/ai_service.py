@@ -115,7 +115,7 @@ class AIMatchingService:
         try:
             # Call Gemini Api with new SDK
             response = self.client.models.generate_content(
-                model='gemini-2.0-flash-exp',
+                model='gemini-2.5-flash',
                 contents=prompt,
                 config=genai.types.GenerateContentConfig(
                     temperature=0.2,
@@ -195,7 +195,7 @@ class AIMatchingService:
 
             try:
                 response = self.client.models.generate_content(
-                    model='gemini-2.0-flash-exp',
+                    model='gemini-2.5-flash',
                     contents=prompt
                 )
                 result = json.loads(response.text.strip())

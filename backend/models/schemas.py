@@ -33,7 +33,7 @@ class MatchedLecture(BaseModel):
     title: str = Field(..., description="Lecture title")
     url: HttpUrl = Field(..., description = "Youtube video URL")
     reasoning: str = Field(..., description = "Why this lecture matches the topic")
-    confidence: Optional[float] = Field(None, ge=0.0, le=1.0, description="Mathch confidence score")
+    confidence: Optional[float] = Field(None, ge=0.0, le=1.0, description="Match confidence score")
     order: int = Field(..., ge=1, description="Recommended watch order")
 
 class TopicMatch(BaseModel):
