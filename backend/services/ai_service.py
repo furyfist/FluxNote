@@ -116,41 +116,26 @@ Generate ONLY the JSON:"""
         prompt = self._build_prompt(syllabus_text, lectures)
 
         try:
-            # ========================================================================
-            # TESTING MODE: Load from saved JSON file (comment out for live API calls)
-            # ========================================================================
-            with open('AIResponse.json', 'r', encoding='utf-8') as f:
-                result = json.load(f)
-            response_text = json.dumps(result)  # For debug printing
-            
-            # ========================================================================
-            # PRODUCTION MODE: Uncomment below to use actual Gemini API
-            # ========================================================================
-            # # Call Gemini API with new SDK
-            # response = self.client.models.generate_content(
-            #     model='gemini-2.0-flash-exp',
-            #     contents=prompt,
-            #     config=genai.types.GenerateContentConfig(
-            #         temperature=0.2,
-            #         max_output_tokens=8192,
-            #     )
-            # )
-            # 
-            # # Extract text
-            # response_text = response.text.strip()
-            # 
-            # # Clean response (remove markdown code blocks if present)
-            # if response_text.startswith("```json"):
-            #     response_text = response_text[7:]
-            # if response_text.startswith("```"):
-            #     response_text = response_text[3:]
-            # if response_text.endswith("```"):
-            #     response_text = response_text[:-3]
-            # response_text = response_text.strip()
-            # 
-            # # Parse JSON
-            # result = json.loads(response_text)
-            # ========================================================================
+            response = self.client.models.generate_content(
+                model='gemini-2.5-flash',
+                contents=prompt,
+                config=genai.types.GenerateContentConfig(
+                    temperature=0.2,
+                    max_output_tokens= 65536,
+                )
+            )
+
+            response_text = response.text.strip()
+
+            if response_text.startswith("```json"):
+                response_text = response_text[7:]
+            if response_text.startswith("```"):
+                response_text = response_text[3:]
+            if response_text.endswith("```"):
+                response_text = response_text[:-3]
+            response_text = response_text.strip()
+
+            result = json.loads(response_text)
 
             # DEBUG: Print raw response
             print("=" * 50)
@@ -188,7 +173,7 @@ Generate ONLY the JSON:"""
                         ))
                     else:
                         # Debug: Log if lecture number is out of range
-                        print(f"⚠️  Lecture number {lecture_num} out of range (1-{len(lectures)})")
+                        print(f"Lecture number {lecture_num} out of range (1-{len(lectures)})")
                 
                 # Add topic with its matched lectures
                 topic_matches.append(TopicMatch( 
@@ -199,11 +184,11 @@ Generate ONLY the JSON:"""
             return topic_matches
             
         except json.JSONDecodeError as e:
-            print(f"❌ JSON Parse Error: {str(e)}")
+            print(f"JSON Parse Error: {str(e)}")
             raise ValueError(f"Failed to parse AI response as JSON: {str(e)}")
         
         except Exception as e:
-            print(f"❌ Matching Error: {str(e)}")
+            print(f"Matching Error: {str(e)}")
             raise ValueError(f"AI matching failed: {str(e)}")
 
     
@@ -232,7 +217,7 @@ Return as JSON:
 
         try:
             response = self.client.models.generate_content(
-                model='gemini-2.0-flash-exp',
+                model='gemini-2.5-flash',
                 contents=prompt
             )
             result = json.loads(response.text.strip())
@@ -240,53 +225,3 @@ Return as JSON:
         except:
             return {"topic_count": 0, "summary": "Unable to analyze"}
 
-
-# ============================================================================
-# TESTING / USAGE EXAMPLE
-# ============================================================================
-
-if __name__ == "__main__":
-    from dotenv import load_dotenv
-    load_dotenv()
-    
-    service = AIMatchingService()
-    
-    # Test data
-    test_syllabus = """
-    Week 1: Introduction to Databases
-    Week 2: SQL Basics and Queries
-    Week 3: Database Normalization
-    Week 4: Transactions and ACID Properties
-    """
-    
-    test_lectures = [
-        YouTubeVideo(
-            title="Database Fundamentals - Complete Guide",
-            video_id="abc123",
-            url="https://youtube.com/watch?v=abc123",
-            position=1
-        ),
-        YouTubeVideo(
-            title="SQL Tutorial for Beginners",
-            video_id="def456",
-            url="https://youtube.com/watch?v=def456",
-            position=2
-        ),
-        YouTubeVideo(
-            title="Normalization Explained (1NF, 2NF, 3NF)",
-            video_id="ghi789",
-            url="https://youtube.com/watch?v=ghi789",
-            position=3
-        )
-    ]
-    
-    print("Matching lectures to syllabus...\n")
-    matches = service.match_lectures(test_syllabus, test_lectures)
-    
-    for match in matches:
-        print(f"📚 {match.topic}")
-        for lec in match.matched_lectures:
-            print(f"   → {lec.title}")
-            print(f"      Confidence: {lec.confidence:.2f} | Order: {lec.order}")
-            print(f"      Reason: {lec.reasoning}")
-            print(f"      Link: {lec.url}\n")
