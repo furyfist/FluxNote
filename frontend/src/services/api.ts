@@ -1,7 +1,7 @@
 // API Service for Lecture Matcher Backend
 import { MatchRequest, MatchResponse } from '../types';
 
-const API_BASE_URL = 'http://localhost:5000';
+const API_BASE_URL = 'http://localhost:8000';
 
 /**
  * Match lectures from a YouTube playlist with syllabus topics
@@ -18,7 +18,7 @@ export const matchLectures = async (
             },
             body: JSON.stringify({
                 playlist_url: playlistUrl,
-                syllabus: syllabus,
+                syllabus_text: syllabus,
             } as MatchRequest),
         });
 
@@ -35,7 +35,7 @@ export const matchLectures = async (
         // Network error or fetch failed
         if (error instanceof Error && error.message === 'Failed to fetch') {
             throw new Error(
-                'Unable to connect to the server. Please ensure the backend is running on http://localhost:5000'
+                'Unable to connect to the server. Please ensure the backend is running on http://localhost:8000'
             );
         }
         throw error;

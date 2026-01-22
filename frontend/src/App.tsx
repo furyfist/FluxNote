@@ -21,8 +21,8 @@ function App() {
         try {
             const response = await matchLectures(formData.playlistUrl, formData.syllabus);
 
-            if (response.success && response.results) {
-                setResults(response.results);
+            if (response.success && response.matches) {
+                setResults(response.matches);
             } else {
                 setError('No results returned from the server. Please try again.');
             }
@@ -57,7 +57,7 @@ function App() {
                         {error && <ErrorMessage message={error} onRetry={handleRetry} />}
 
                         {results && !isLoading && !error && (
-                            <ResultsDisplay results={results} />
+                            <ResultsDisplay matches={results} />
                         )}
 
                         {!results && !isLoading && !error && (

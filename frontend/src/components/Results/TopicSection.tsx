@@ -11,9 +11,8 @@ const TopicSection: React.FC<TopicSectionProps> = ({ topic, matches }) => {
                 <div className="lectures-grid">
                     {matches.map((match, index) => (
                         <LectureCard
-                            key={`${match.lecture.video_id}-${index}`}
-                            lecture={match.lecture}
-                            score={match.score}
+                            key={`${match.url}-${index}`}
+                            lecture={match}
                         />
                     ))}
                 </div>

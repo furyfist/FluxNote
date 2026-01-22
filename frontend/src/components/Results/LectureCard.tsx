@@ -3,7 +3,7 @@ import ScoreBadge from '../UI/ScoreBadge';
 import './Results.css';
 import { LectureCardProps } from '../../types';
 
-const LectureCard: React.FC<LectureCardProps> = ({ lecture, score }) => {
+const LectureCard: React.FC<LectureCardProps> = ({ lecture }) => {
     return (
         <div className="lecture-card">
             <div className="lecture-card-header">
@@ -18,7 +18,7 @@ const LectureCard: React.FC<LectureCardProps> = ({ lecture, score }) => {
                 </a>
             </div>
             <div className="lecture-card-footer">
-                <ScoreBadge score={score} />
+                <ScoreBadge score={lecture.confidence} />
                 <span className="match-label">Match Score</span>
             </div>
         </div>
