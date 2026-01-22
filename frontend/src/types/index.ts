@@ -3,28 +3,25 @@
 // API Types
 export interface MatchRequest {
     playlist_url: string;
-    syllabus: string;
+    syllabus_text: string;
 }
 
-export interface Lecture {
+export interface MatchedLecture {
     title: string;
-    video_id: string;
     url: string;
-}
-
-export interface Match {
-    lecture: Lecture;
-    score: number;
+    reasoning: string;
+    confidence: number;
+    order: number;
 }
 
 export interface TopicResult {
     topic: string;
-    matches: Match[];
+    matched_lectures: MatchedLecture[];
 }
 
 export interface MatchResponse {
     success: boolean;
-    results: TopicResult[];
+    matches: TopicResult[];
     message?: string;
 }
 
@@ -51,17 +48,16 @@ export interface MatchFormProps {
 }
 
 export interface ResultsDisplayProps {
-    results: TopicResult[];
+    matches: TopicResult[];
 }
 
 export interface TopicSectionProps {
     topic: string;
-    matches: Match[];
+    matches: MatchedLecture[];
 }
 
 export interface LectureCardProps {
-    lecture: Lecture;
-    score: number;
+    lecture: MatchedLecture;
 }
 
 export interface LoadingSpinnerProps {

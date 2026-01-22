@@ -3,8 +3,8 @@ import TopicSection from './TopicSection';
 import './Results.css';
 import { ResultsDisplayProps } from '../../types';
 
-const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ results }) => {
-    if (!results || results.length === 0) {
+const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ matches }) => {
+    if (!matches || matches.length === 0) {
         return null;
     }
 
@@ -15,11 +15,11 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ results }) => {
             </div>
 
             <div className="results-content">
-                {results.map((result, index) => (
+                {matches.map((result, index) => (
                     <TopicSection
                         key={`${result.topic}-${index}`}
                         topic={result.topic}
-                        matches={result.matches}
+                        matches={result.matched_lectures}
                     />
                 ))}
             </div>

@@ -76,7 +76,3 @@ class ErrorResponse(BaseModel):
     success: bool = Field(default=False)
     message: str = Field(..., description="Error message")
     details: Optional[str] = Field(None, description="Additional details")
-
-
-
-
