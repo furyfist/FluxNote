@@ -1,0 +1,842 @@
+{
+  "matches": [
+    {
+      "topic": "Week 1: Introduction to Database Management Systems",
+      "matched_lectures": [
+        {
+          "lecture_number": 2,
+          "title": "Lec-2: Introduction to DBMS (Database Management System) With Real life examples | What is DBMS",
+          "reasoning": "This lecture provides a fundamental introduction to Database Management Systems, defining what DBMS is and offering real-life examples, which is perfect for the start of the course.",       
+          "confidence": 0.98,
+          "order": 1
+        },
+        {
+          "lecture_number": 3,
+          "title": "Lec-3: File System vs DBMS | Disadvantages of File System | DBMS Advantages",
+          "reasoning": "This lecture explains the advantages of DBMS by comparing it with traditional file systems, providing context and justification for using DBMS.",
+          "confidence": 0.95,
+          "order": 2
+        },
+        {
+          "lecture_number": 4,
+          "title": "Lec-4: 2 tier and 3 tier Architecture with real life examples | Database Management System",
+          "reasoning": "Covers the architectural aspects of DBMS, which is a core introductory topic for understanding how database systems are structured.",
+          "confidence": 0.92,
+          "order": 3
+        },
+        {
+          "lecture_number": 5,
+          "title": "Lec-5: What is Schema | How to define Schema | Database management system in Hindi",   
+          "reasoning": "Introduces the concept of schema, a fundamental building block for understanding database structure and design.",
+          "confidence": 0.90,
+          "order": 4
+        },
+        {
+          "lecture_number": 6,
+          "title": "Lec-6: Three Schema Architecture | Three Level of Abstraction | Database Management System",
+          "reasoning": "Expands on the schema concept by detailing the three-schema architecture and levels of abstraction, crucial for a comprehensive introduction.",
+          "confidence": 0.93,
+          "order": 5
+        },
+        {
+          "lecture_number": 7,
+          "title": "Lec-7: What is Data Independence | Logical vs. Physical Independence | DBMS",
+          "reasoning": "Explains data independence, a key benefit and concept in DBMS, distinguishing between logical and physical independence.",
+          "confidence": 0.95,
+          "order": 6
+        },
+        {
+          "lecture_number": 127,
+          "title": "Lec-115: Various objects in Database | Oracle, SQL Server",
+          "reasoning": "Provides an overview of different database objects, which helps in understanding the components of a DBMS after the initial architectural concepts.",
+          "confidence": 0.85,
+          "order": 7
+        }
+      ]
+    },
+    {
+      "topic": "Week 2: Entity-Relationship Model and ER Diagrams",
+      "matched_lectures": [
+        {
+          "lecture_number": 16,
+          "title": "Lec-14: Introduction to ER model | ER Model क्या है",
+          "reasoning": "This lecture directly introduces the Entity-Relationship (ER) model, which is the core topic for this week.",
+          "confidence": 0.98,
+          "order": 1
+        },
+        {
+          "lecture_number": 17,
+          "title": "Lec-15: Types of Attributes in ER Model | Full Concept | DBMS in Hindi",
+          "reasoning": "Covers the different types of attributes used in ER models, which are essential components of ER diagrams.",
+          "confidence": 0.95,
+          "order": 2
+        },
+        {
+          "lecture_number": 18,
+          "title": "Lec-16: One to One relationship in DBMS in Hindi",
+          "reasoning": "Explains the 'one-to-one' relationship type, a fundamental concept in ER modeling.",
+          "confidence": 0.92,
+          "order": 3
+        },
+        {
+          "lecture_number": 19,
+          "title": "Lec-17: One to Many Relationship in DBMS in Hindi | 1-M Relationship",
+          "reasoning": "Explains the 'one-to-many' relationship type, another crucial concept in ER modeling.",
+          "confidence": 0.92,
+          "order": 4
+        },
+        {
+          "lecture_number": 20,
+          "title": "Lec-18: Many to Many Relationship in DBMS | M-N Relationship",
+          "reasoning": "Explains the 'many-to-many' relationship type, completing the basic relationship types in ER models.",
+          "confidence": 0.92,
+          "order": 5
+        },
+        {
+          "lecture_number": 21,
+          "title": "Introduction to Weak Entity Set with Example | Database Management System",
+          "reasoning": "Covers weak entity sets, a specific and important concept within ER modeling.",    
+          "confidence": 0.90,
+          "order": 6
+        },
+        {
+          "lecture_number": 8,
+          "title": "Lec-8.0: Integrity Constraints in Database with Examples",
+          "reasoning": "Introduces integrity constraints, which are closely related to keys and relationships in ER models and relational databases.",
+          "confidence": 0.88,
+          "order": 7
+        },
+        {
+          "lecture_number": 9,
+          "title": "Lec-8: What is CANDIDATE KEY and PRIMARY key | Full Concept | Most suitable examples | DBMS",
+          "reasoning": "Explains candidate and primary keys, which are essential for identifying entities and forming relationships in ER diagrams and subsequent relational schemas.",
+          "confidence": 0.95,
+          "order": 8
+        },
+        {
+          "lecture_number": 10,
+          "title": "Lec-9: What is Primary Key in DBMS | Primary Key with Examples in Hindi",
+          "reasoning": "Focuses specifically on primary keys, reinforcing their importance and usage.",    
+          "confidence": 0.90,
+          "order": 9
+        },
+        {
+          "lecture_number": 15,
+          "title": "Lec-13: Super key in DBMS in HINDI | ये Question Competition Exams में अक्सर पूछा गया ह    है",
+          "reasoning": "Covers super keys, a broader concept that encompasses candidate and primary keys, providing a complete understanding of key types.",
+          "confidence": 0.88,
+          "order": 10
+        },
+        {
+          "lecture_number": 11,
+          "title": "Lec-10: Foreign Key in DBMS | Full Concept with examples | DBMS in Hindi",
+          "reasoning": "Explains foreign keys, which are crucial for representing relationships between entities in the relational model derived from ER diagrams.",
+          "confidence": 0.95,
+          "order": 11
+        },
+        {
+          "lecture_number": 12,
+          "title": "Lec-11: Insert, Update & Delete from Foreign Key table | Referential Integrity",       
+          "reasoning": "Demonstrates the practical application of foreign keys and the concept of referential integrity, which is vital for maintaining data consistency.",
+          "confidence": 0.93,
+          "order": 12
+        },
+        {
+          "lecture_number": 14,
+          "title": "Foreign Key🔑 with On Delete Cascade with Execution",
+          "reasoning": "Covers advanced behavior of foreign keys, specifically 'On Delete Cascade', which is important for understanding referential actions.",
+          "confidence": 0.90,
+          "order": 13
+        },
+        {
+          "lecture_number": 13,
+          "title": "Lec-12: Question on Foreign Key | ये Question Competition Exams में अक्सर पूछा गया है",
+          "reasoning": "Provides practice questions on foreign keys, helping students solidify their understanding.",
+          "confidence": 0.85,
+          "order": 14
+        },
+        {
+          "lecture_number": 22,
+          "title": "Lec-19:Question on Minimize tables in ER Model | ये Question Competition Exams में अक्स   सर पूछा गया है",
+          "reasoning": "Offers a practical question on optimizing table design from ER models, bridging ER concepts to relational schema design.",
+          "confidence": 0.87,
+          "order": 15
+        },
+        {
+          "lecture_number": 23,
+          "title": "Lec-116: Important Question explanation on ER Model | DBMS",
+          "reasoning": "Further practice and explanation of important questions related to the ER Model.", 
+          "confidence": 0.85,
+          "order": 16
+        }
+      ]
+    },
+    {
+      "topic": "Week 3: Relational Model and SQL Basics",
+      "matched_lectures": [
+        {
+          "lecture_number": 131,
+          "title": "Lec-122: Codd’s 12 Rules of RDBMS with examples",
+          "reasoning": "Introduces the foundational principles of the Relational Database Management System (RDBMS), setting the stage for the relational model.",
+          "confidence": 0.90,
+          "order": 1
+        },
+        {
+          "lecture_number": 50,
+          "title": "Lec-44: Introduction to Relational Algebra | Database Management System",
+          "reasoning": "Provides an introduction to Relational Algebra, a procedural query language fundamental to the relational model.",
+          "confidence": 0.95,
+          "order": 2
+        },
+        {
+          "lecture_number": 51,
+          "title": "Lec-45: Projection in Relational Algebra | Database Management System",
+          "reasoning": "Covers the Projection operation in Relational Algebra, a core operation for selecting columns.",
+          "confidence": 0.92,
+          "order": 3
+        },
+        {
+          "lecture_number": 52,
+          "title": "Lec-46: Selection in Relational Algebra | Database Management System",
+          "reasoning": "Covers the Selection operation in Relational Algebra, a core operation for filtering rows.",
+          "confidence": 0.92,
+          "order": 4
+        },
+        {
+          "lecture_number": 53,
+          "title": "Lec-47: Cross/Cartesian Product in Relational Algebra | Database Management System",   
+          "reasoning": "Covers the Cartesian Product operation, essential for combining relations.",       
+          "confidence": 0.90,
+          "order": 5
+        },
+        {
+          "lecture_number": 54,
+          "title": "Lec-48: Set Difference in Relational Algebra | Database Management System",
+          "reasoning": "Covers the Set Difference operation, one of the set-theoretic operations in Relational Algebra.",
+          "confidence": 0.90,
+          "order": 6
+        },
+        {
+          "lecture_number": 55,
+          "title": "Lec-49: Union Operation in Relational Algebra | Database Management System",
+          "reasoning": "Covers the Union operation, another fundamental set-theoretic operation.",
+          "confidence": 0.90,
+          "order": 7
+        },
+        {
+          "lecture_number": 56,
+          "title": "Lec-50: Division Operation in Relational Algebra | Database Management System",        
+          "reasoning": "Covers the Division operation, a more complex but important Relational Algebra operation.",
+          "confidence": 0.88,
+          "order": 8
+        },
+        {
+          "lecture_number": 57,
+          "title": "Rename Operator in Relational Algebra | Database Management System (DBMS)",
+          "reasoning": "Explains the Rename operator, which is used to change relation or attribute names in Relational Algebra expressions.",
+          "confidence": 0.88,
+          "order": 9
+        },
+        {
+          "lecture_number": 130,
+          "title": "Lec-121: Important Question on Relational Algebra | DBMS",
+          "reasoning": "Provides practice questions to reinforce understanding of Relational Algebra concepts.",
+          "confidence": 0.85,
+          "order": 10
+        },
+        {
+          "lecture_number": 59,
+          "title": "Lec-52: Introduction to Structured Query Language | All Points regarding its Features and Syllabus",
+          "reasoning": "Directly introduces SQL, the standard language for interacting with relational databases, covering its features and syllabus.",
+          "confidence": 0.98,
+          "order": 11
+        },
+        {
+          "lecture_number": 60,
+          "title": "Lec-53: All Types of SQL Commands with Example | DDL, DML, DCL, TCL and CONSTRAINTS | DBMS",
+          "reasoning": "Provides an overview of different SQL command types (DDL, DML, DCL, TCL), which is essential for basic SQL understanding.",
+          "confidence": 0.95,
+          "order": 12
+        },
+        {
+          "lecture_number": 61,
+          "title": "Lec-54: Create table in SQL with execution | SQL for Beginners | Oracle LIVE",
+          "reasoning": "Demonstrates the 'CREATE TABLE' DDL command, a fundamental operation for defining database schemas.",
+          "confidence": 0.93,
+          "order": 13
+        },
+        {
+          "lecture_number": 62,
+          "title": "Lec-124: CREATE Command (DDL) in SQL with Implementation on ORACLE",
+          "reasoning": "Further illustrates the 'CREATE' DDL command with practical implementation, reinforcing the previous lecture.",
+          "confidence": 0.90,
+          "order": 14
+        },
+        {
+          "lecture_number": 63,
+          "title": "Lec-55: ALTER Command (DDL) in SQL with Implementation on ORACLE",
+          "reasoning": "Covers the 'ALTER' DDL command, used for modifying existing table structures.",    
+          "confidence": 0.92,
+          "order": 15
+        },
+        {
+          "lecture_number": 65,
+          "title": "Lec-57 Difference between Delete, Drop & Truncate in SQL | DBMS",
+          "reasoning": "Explains the crucial differences between 'DELETE', 'DROP', and 'TRUNCATE' commands, which are common points of confusion for beginners.",
+          "confidence": 0.90,
+          "order": 16
+        },
+        {
+          "lecture_number": 66,
+          "title": "Lec-58: Constraints in SQL in Hindi | DBMS",
+          "reasoning": "Covers SQL constraints, which are vital for maintaining data integrity within the relational model.",
+          "confidence": 0.93,
+          "order": 17
+        },
+        {
+          "lecture_number": 78,
+          "title": "Lec-126: How SQL Query executes?? Order of SQL Query Execution⏳🔄",
+          "reasoning": "Explains the internal execution order of SQL queries, providing deeper insight into how SQL works.",
+          "confidence": 0.88,
+          "order": 18
+        }
+      ]
+    },
+    {
+      "topic": "Week 4: SQL Joins and Subqueries",
+      "matched_lectures": [
+        {
+          "lecture_number": 43,
+          "title": "Lec-38: Introduction to Joins and its types | Need of Joins with example | DBMS",      
+          "reasoning": "Provides a comprehensive introduction to SQL Joins, explaining their necessity and different types, which is the primary focus of this week.",
+          "confidence": 0.98,
+          "order": 1
+        },
+        {
+          "lecture_number": 46,
+          "title": "Lec-41: Equi Join operation with Example | Database Management System",
+          "reasoning": "Covers Equi Join, a fundamental type of join operation.",
+          "confidence": 0.92,
+          "order": 2
+        },
+        {
+          "lecture_number": 44,
+          "title": "Lec-39: Natural Join operation with Example | Database Management System",
+          "reasoning": "Covers Natural Join, another common type of join operation.",
+          "confidence": 0.92,
+          "order": 3
+        },
+        {
+          "lecture_number": 45,
+          "title": "Lec-40: Self Join operation with Example | Database Management System",
+          "reasoning": "Explains Self Join, a specialized join where a table is joined with itself.",      
+          "confidence": 0.90,
+          "order": 4
+        },
+        {
+          "lecture_number": 47,
+          "title": "Lec-42: Left Outer Join operation with Example | Database Management System",
+          "reasoning": "Covers Left Outer Join, an important type of outer join.",
+          "confidence": 0.92,
+          "order": 5
+        },
+        {
+          "lecture_number": 48,
+          "title": "Lec-43: Right Outer Join operation with Example | Database Management System",
+          "reasoning": "Covers Right Outer Join, another important type of outer join.",
+          "confidence": 0.92,
+          "order": 6
+        },
+        {
+          "lecture_number": 49,
+          "title": "Lec-118: Question on Inner, Left, Right & Full Outer Joins Explanation | DBMS",        
+          "reasoning": "Provides practice and explanation for various join types, consolidating understanding.",
+          "confidence": 0.88,
+          "order": 7
+        },
+        {
+          "lecture_number": 79,
+          "title": "Lec-67: SQL Aggregate Functions - SUM, AVG(n), COUNT, MIN, MAX Functions | DBMS",      
+          "reasoning": "Introduces SQL aggregate functions, which are frequently used with GROUP BY and HAVING clauses, often in conjunction with subqueries.",
+          "confidence": 0.95,
+          "order": 8
+        },
+        {
+          "lecture_number": 80,
+          "title": "Lec-113: How Aggregate Functions work on NULL Values | SQL | DBMS",
+          "reasoning": "Explains the behavior of aggregate functions with NULL values, an important detail for accurate data analysis.",
+          "confidence": 0.90,
+          "order": 9
+        },
+        {
+          "lecture_number": 69,
+          "title": "Lec-61: SQL Queries and Subqueries (part-3) | Group By clause | Database Management System",
+          "reasoning": "Covers the GROUP BY clause, which is fundamental for summarizing data and often used with aggregate functions and subqueries.",
+          "confidence": 0.93,
+          "order": 10
+        },
+        {
+          "lecture_number": 71,
+          "title": "Lec-62: SQL Queries and Subqueries (part-4) | Having clause | Database Management System",
+          "reasoning": "Covers the HAVING clause, used for filtering grouped results, directly complementing the GROUP BY clause.",
+          "confidence": 0.93,
+          "order": 11
+        },
+        {
+          "lecture_number": 67,
+          "title": "Lec-59: SQL Queries and Subqueries (part-1) | Database Management System",
+          "reasoning": "Begins the series on SQL queries and subqueries, introducing the concept.",        
+          "confidence": 0.95,
+          "order": 12
+        },
+        {
+          "lecture_number": 68,
+          "title": "Lec-60: SQL Queries and Subqueries (part-2) | 2nd Highest Salary | Nested Queries | DBMS",
+          "reasoning": "Continues with subqueries, including nested queries and a common problem like finding the Nth highest salary.",
+          "confidence": 0.95,
+          "order": 13
+        },
+        {
+          "lecture_number": 73,
+          "title": "Lec-64: SQL Queries and Subqueries (part-6)| use of IN and Not IN | Database Management System",
+          "reasoning": "Explains the use of IN and NOT IN operators within subqueries, a common pattern.", 
+          "confidence": 0.92,
+          "order": 14
+        },
+        {
+          "lecture_number": 74,
+          "title": "Lec-65: SQL Queries and Subqueries (part-7)| use of IN and Not IN in Subquery | DBMS", 
+          "reasoning": "Further elaborates on IN and NOT IN in subqueries with more examples.",
+          "confidence": 0.90,
+          "order": 15
+        },
+        {
+          "lecture_number": 75,
+          "title": "Lec-66: EXIST and NOT EXIST Subqueries(part-8) | Database Management System",
+          "reasoning": "Covers EXIST and NOT EXIST operators, which are crucial for certain types of subqueries.",
+          "confidence": 0.92,
+          "order": 16
+        },
+        {
+          "lecture_number": 82,
+          "title": "Non Correlated Subquery in SQL with Example | Imp for Placements, GATE, NET & SQL certification",
+          "reasoning": "Distinguishes and explains non-correlated subqueries, a fundamental type.",        
+          "confidence": 0.90,
+          "order": 17
+        },
+        {
+          "lecture_number": 81,
+          "title": "Lec-68: Correlated Subquery in SQL with Example | Imp for Placements, GATE, NET & SQL certification",
+          "reasoning": "Explains correlated subqueries, a more advanced type of subquery.",
+          "confidence": 0.90,
+          "order": 18
+        },
+        {
+          "lecture_number": 83,
+          "title": "Lec-69: Difference between Joins, Nested Subquery and Correlated Subquery | Most Imp Concept of SQL",
+          "reasoning": "Compares joins, nested subqueries, and correlated subqueries, providing a holistic understanding of data retrieval techniques.",
+          "confidence": 0.95,
+          "order": 19
+        },
+        {
+          "lecture_number": 84,
+          "title": "Lec-70: Find Nth(1st,2nd,3rd....N) Highest Salary in SQL | Imp for Competitive & Placement exam",
+          "reasoning": "Addresses a classic SQL problem using subqueries, which is excellent for practical application.",
+          "confidence": 0.88,
+          "order": 20
+        },
+        {
+          "lecture_number": 85,
+          "title": "Lec-71: 3 Imp Questions on SQL basic Concepts | DBMS",
+          "reasoning": "Offers important questions on basic SQL concepts, serving as a review and practice.",
+          "confidence": 0.85,
+          "order": 21
+        }
+      ]
+    },
+    {
+      "topic": "Week 5: Normalization (1NF, 2NF, 3NF, BCNF)",
+      "matched_lectures": [
+        {
+          "lecture_number": 24,
+          "title": "Lec-20: Introduction to Normalization | Insertion, Deletion & Updation Anomaly",       
+          "reasoning": "Provides an introduction to normalization and explains the anomalies it aims to resolve, setting the context for the week's topic.",
+          "confidence": 0.98,
+          "order": 1
+        },
+        {
+          "lecture_number": 27,
+          "title": "Lec-23: Functional Dependency & its properties in DBMS in HINDI",
+          "reasoning": "Explains functional dependencies, which are the theoretical basis for understanding and applying normalization rules.",
+          "confidence": 0.95,
+          "order": 2
+        },
+        {
+          "lecture_number": 26,
+          "title": "Lec-22: Finding Closure of Functional dependency in DBMS | Easiest & Simplest way",    
+          "reasoning": "Covers finding the closure of functional dependencies, a crucial skill for determining keys and normal forms.",
+          "confidence": 0.93,
+          "order": 3
+        },
+        {
+          "lecture_number": 40,
+          "title": "Lec-35: Cover and Equivalence of Functional Dependencies | Database Management System",
+          "reasoning": "Discusses cover and equivalence of functional dependencies, advanced concepts important for normalization theory.",
+          "confidence": 0.90,
+          "order": 4
+        },
+        {
+          "lecture_number": 34,
+          "title": "Lec-30: Minimal Cover in DBMS With Example | Canonical cover",
+          "reasoning": "Explains minimal cover (canonical cover), which is used in the process of normalization and dependency preservation.",
+          "confidence": 0.90,
+          "order": 5
+        },
+        {
+          "lecture_number": 25,
+          "title": "Lec-21: First Normal form in DBMS in HINDI | 1st Normal form क्या होती है ?",
+          "reasoning": "Directly addresses the First Normal Form (1NF), the initial step in database normalization.",
+          "confidence": 0.98,
+          "order": 6
+        },
+        {
+          "lecture_number": 28,
+          "title": "Lec-24: Second Normal Form | 2NF | Database Management System",
+          "reasoning": "Directly addresses the Second Normal Form (2NF), building upon 1NF.",
+          "confidence": 0.98,
+          "order": 7
+        },
+        {
+          "lecture_number": 29,
+          "title": "Lec-25: Third Normal Form in dbms with examples in Hindi | Normalization",
+          "reasoning": "Directly addresses the Third Normal Form (3NF), a widely used normal form.",       
+          "confidence": 0.98,
+          "order": 8
+        },
+        {
+          "lecture_number": 30,
+          "title": "Lec-26: Boyce Codd Normal Form #BCNF #DBMS #Normalization with best examples",
+          "reasoning": "Directly addresses Boyce-Codd Normal Form (BCNF), a stricter form of 3NF.",        
+          "confidence": 0.98,
+          "order": 9
+        },
+        {
+          "lecture_number": 33,
+          "title": "Lec-29: All Normal Forms with Real life examples | 1NF 2NF 3NF BCNF 4NF 5NF | All in One",
+          "reasoning": "Provides a comprehensive overview of all normal forms (1NF, 2NF, 3NF, BCNF, 4NF, 5NF), summarizing the concepts.",
+          "confidence": 0.95,
+          "order": 10
+        },
+        {
+          "lecture_number": 32,
+          "title": "Lec-28: Lossless and Lossy Decomposition| Fifth (5th) Normal Form | Database Management System",
+          "reasoning": "Explains lossless decomposition, a critical property that must be maintained during normalization to avoid data loss.",
+          "confidence": 0.93,
+          "order": 11
+        },
+        {
+          "lecture_number": 41,
+          "title": "Lec-36: Dependency Preserving Decomposition in DBMS with Examples in Hindi | DBMS",    
+          "reasoning": "Covers dependency preserving decomposition, another essential property for maintaining functional dependencies during normalization.",
+          "confidence": 0.93,
+          "order": 12
+        },
+        {
+          "lecture_number": 42,
+          "title": "Lec-37: Dependency Preserving Decomposition in DBMS | Example 2 in Hindi",
+          "reasoning": "Provides an additional example for dependency preserving decomposition, reinforcing the concept.",
+          "confidence": 0.90,
+          "order": 13
+        },
+        {
+          "lecture_number": 31,
+          "title": "Lec-27: BCNF Always Ensures Dependency Preserving Decomposition?? Normalization Examples",
+          "reasoning": "Discusses an important characteristic of BCNF regarding dependency preservation, which is a common point of discussion in advanced normalization.",
+          "confidence": 0.90,
+          "order": 14
+        },
+        {
+          "lecture_number": 36,
+          "title": "Lec-32: How to find out the Normal form of a Relation | DBMS",
+          "reasoning": "Provides practical guidance on how to determine the normal form of a given relation.",
+          "confidence": 0.90,
+          "order": 15
+        },
+        {
+          "lecture_number": 37,
+          "title": "Lec-33: How to Solve Normalization Questions | DBMS",
+          "reasoning": "Offers strategies and methods for solving normalization problems.",
+          "confidence": 0.90,
+          "order": 16
+        },
+        {
+          "lecture_number": 38,
+          "title": "Lec-34: Important Question Explanation on Normalization",
+          "reasoning": "Provides explanations for important normalization questions, aiding in exam preparation and deeper understanding.",
+          "confidence": 0.88,
+          "order": 17
+        },
+        {
+          "lecture_number": 39,
+          "title": "Lec-120: Important Question on Normalization (Schemas) Explanation | DBMS",
+          "reasoning": "Further practice with important questions focusing on normalization of schemas.",  
+          "confidence": 0.88,
+          "order": 18
+        }
+      ]
+    },
+    {
+      "topic": "Week 6: Transactions and ACID Properties",
+      "matched_lectures": [
+        {
+          "lecture_number": 87,
+          "title": "Lec-73: Introduction to Transaction Concurrency in HINDI | Database Management System",
+          "reasoning": "Introduces the concept of transactions, which is the core topic for this week, and sets the stage for ACID properties.",
+          "confidence": 0.98,
+          "order": 1
+        },
+        {
+          "lecture_number": 88,
+          "title": "Lec-74: ACID Properties of a Transaction | Database Management System",
+          "reasoning": "Directly covers the ACID properties (Atomicity, Consistency, Isolation, Durability), which are fundamental to understanding transactions.",
+          "confidence": 0.98,
+          "order": 2
+        },
+        {
+          "lecture_number": 89,
+          "title": "Lec-75: Transaction States | Database Management System",
+          "reasoning": "Explains the different states a transaction can be in, providing a complete picture of its lifecycle.",
+          "confidence": 0.95,
+          "order": 3
+        },
+        {
+          "lecture_number": 90,
+          "title": "Lec-76: What is Schedule | Serial Vs Parallel Schedule | Database Management System",  
+          "reasoning": "Introduces the concept of schedules, which are sequences of operations by transactions, essential for understanding concurrency.",
+          "confidence": 0.92,
+          "order": 4
+        },
+        {
+          "lecture_number": 94,
+          "title": "Lec-80: Irrecoverable Vs Recoverable Schedules in Transactions | DBMS",
+          "reasoning": "Explains the recoverability property of schedules, which is crucial for ensuring database consistency after failures.",
+          "confidence": 0.93,
+          "order": 5
+        },
+        {
+          "lecture_number": 95,
+          "title": "Lec-81: Cascading vs Cascadeless Schedule with Example | Recoverability | DBMS",       
+          "reasoning": "Delves into specific types of recoverable schedules, cascading and cascadeless, providing detailed examples.",
+          "confidence": 0.90,
+          "order": 6
+        },
+        {
+          "lecture_number": 119,
+          "title": "Lec-105: Immediate Database Modification in DBMS | Log Based Recovery Methods",        
+          "reasoning": "Covers immediate database modification and log-based recovery, which are mechanisms to ensure durability and atomicity of transactions.",
+          "confidence": 0.88,
+          "order": 7
+        },
+        {
+          "lecture_number": 120,
+          "title": "Lec-106: Deferred Database Modification in DBMS | Log Based Recovery | Imp for UGC NET and KVS",
+          "reasoning": "Covers deferred database modification, another log-based recovery method, complementing the previous lecture.",
+          "confidence": 0.88,
+          "order": 8
+        }
+      ]
+    },
+    {
+      "topic": "Week 7: Concurrency Control and Locking",
+      "matched_lectures": [
+        {
+          "lecture_number": 91,
+          "title": "Lec-77: All Concurrency Problems | Dirty Read | Incorrect Summary | Lost Update | Phantom Read",
+          "reasoning": "Explains the various problems that arise from concurrent execution of transactions, highlighting the need for concurrency control.",
+          "confidence": 0.98,
+          "order": 1
+        },
+        {
+          "lecture_number": 92,
+          "title": "Lec-78: Write-Read Conflict or Dirty Read Problem | Database Management System",       
+          "reasoning": "Focuses on the 'Dirty Read' problem, a specific concurrency issue.",
+          "confidence": 0.92,
+          "order": 2
+        },
+        {
+          "lecture_number": 93,
+          "title": "Lec-79: Read-Write Conflict or Unrepeatable Read Problem | Database Management System",
+          "reasoning": "Focuses on the 'Unrepeatable Read' problem, another specific concurrency issue.",  
+          "confidence": 0.92,
+          "order": 3
+        },
+        {
+          "lecture_number": 96,
+          "title": "Lec-82: Introduction to Serializability | Transactions Concurrency and Control | DBMS",
+          "reasoning": "Introduces serializability, the main correctness criterion for concurrent transaction execution.",
+          "confidence": 0.95,
+          "order": 4
+        },
+        {
+          "lecture_number": 97,
+          "title": "Lec-83: Conflict Equivalent Schedules with Example | Transaction concurrency and Control | DBMS",
+          "reasoning": "Explains conflict equivalent schedules, a key concept for understanding conflict serializability.",
+          "confidence": 0.93,
+          "order": 5
+        },
+        {
+          "lecture_number": 98,
+          "title": "Lec-84: Conflict Serializability | Precedence Graph | Transaction | DBMS",
+          "reasoning": "Covers conflict serializability and the use of precedence graphs to test for it, a core topic in concurrency control.",
+          "confidence": 0.95,
+          "order": 6
+        },
+        {
+          "lecture_number": 99,
+          "title": "Lec-85: Why View Serializability is Used | Introduction to View Serializability | DBMS",
+          "reasoning": "Introduces view serializability, another form of serializability, providing a broader perspective on correctness criteria.",
+          "confidence": 0.90,
+          "order": 7
+        },
+        {
+          "lecture_number": 100,
+          "title": "Lec-86:Shared Exclusive Locking Protocol with Example in Hindi | Concurrency Control | DBMS | Part-1",
+          "reasoning": "Introduces shared and exclusive locking protocols, a fundamental mechanism for concurrency control.",
+          "confidence": 0.95,
+          "order": 8
+        },
+        {
+          "lecture_number": 101,
+          "title": "Lec-87: Drawbacks in Shared/Exclusive Locking Protocol with Example | Concurrency Control Part-2",
+          "reasoning": "Discusses the limitations and drawbacks of basic shared/exclusive locking, leading to more advanced protocols.",
+          "confidence": 0.90,
+          "order": 9
+        },
+        {
+          "lecture_number": 102,
+          "title": "Lec-88: 2 Phase Locking(2PL) Protocol in Transaction Concurrency Control | DBMS",      
+          "reasoning": "Covers the Two-Phase Locking (2PL) protocol, a widely used and important concurrency control technique.",
+          "confidence": 0.98,
+          "order": 10
+        },
+        {
+          "lecture_number": 103,
+          "title": "Lec-89: Drawbacks in 2 Phase Locking(2PL) Protocol with examples | Concurrency Control | DBMS",
+          "reasoning": "Explores the drawbacks and limitations of the 2PL protocol, providing a critical understanding.",
+          "confidence": 0.90,
+          "order": 11
+        },
+        {
+          "lecture_number": 104,
+          "title": "Lec-90: Strict 2PL, Rigorous 2PL and Conservative 2PLSchedule | 2 Phase Locking in DBMS",
+          "reasoning": "Details variations of 2PL (Strict, Rigorous, Conservative), offering a deeper dive into locking protocols.",
+          "confidence": 0.92,
+          "order": 12
+        },
+        {
+          "lecture_number": 105,
+          "title": "Lec-91: Basic Timestamp Ordering Protocol with Example in Hindi | Concurrency Control | DBMS",
+          "reasoning": "Introduces the Timestamp Ordering Protocol, an alternative concurrency control mechanism to locking.",
+          "confidence": 0.95,
+          "order": 13
+        },
+        {
+          "lecture_number": 106,
+          "title": "Lec-92: How to Solve Question on Timestamp Ordering Protocol | Concurrency Control | DBMS",
+          "reasoning": "Provides practical guidance on solving problems related to the Timestamp Ordering Protocol.",
+          "confidence": 0.90,
+          "order": 14
+        }
+      ]
+    },
+    {
+      "topic": "Week 8: Indexing and B-Trees",
+      "matched_lectures": [
+        {
+          "lecture_number": 107,
+          "title": "Lec-93: Why Indexing is used | Indexing Beginning | DBMS",
+          "reasoning": "Introduces the concept of indexing and explains its purpose and benefits in database systems.",
+          "confidence": 0.98,
+          "order": 1
+        },
+        {
+          "lecture_number": 108,
+          "title": "Lec-94: Numerical Example on I/O Cost in Indexing | Part-1 | DBMS",
+          "reasoning": "Provides a numerical example to illustrate the performance benefits and I/O cost reduction achieved through indexing.",
+          "confidence": 0.90,
+          "order": 2
+        },
+        {
+          "lecture_number": 109,
+          "title": "Lec-95: Numerical Example on I/O Cost in Indexing | Part 2 | DBMS",
+          "reasoning": "Continues with another numerical example on I/O cost, reinforcing the practical impact of indexing.",
+          "confidence": 0.88,
+          "order": 3
+        },
+        {
+          "lecture_number": 110,
+          "title": "Lec-96: Types Of Indexes | Most Important Video on Indexing",
+          "reasoning": "Covers different types of indexes, providing a comprehensive overview of indexing strategies.",
+          "confidence": 0.95,
+          "order": 4
+        },
+        {
+          "lecture_number": 111,
+          "title": "Lec-97: Primary Index With Example | GATE, PSU and UGC NET | DBMS",
+          "reasoning": "Explains primary indexes with examples, a fundamental type of index.",
+          "confidence": 0.92,
+          "order": 5
+        },
+        {
+          "lecture_number": 112,
+          "title": "Lec-98: Clustered Index in Database with Example",
+          "reasoning": "Explains clustered indexes, another important type of index with specific characteristics.",
+          "confidence": 0.92,
+          "order": 6
+        },
+        {
+          "lecture_number": 113,
+          "title": "Lec-99: Secondary Index in Database with Example | Multilevel Indexing",
+          "reasoning": "Explains secondary indexes and introduces multilevel indexing, providing a complete picture of index types.",
+          "confidence": 0.92,
+          "order": 7
+        },
+        {
+          "lecture_number": 114,
+          "title": "Lec-100: Introduction to B-Tree and its Structure | Block Pointer, Record Pointer, Key",
+          "reasoning": "Provides a detailed introduction to B-Trees, including their structure and components, which is a core topic for this week.",
+          "confidence": 0.98,
+          "order": 8
+        },
+        {
+          "lecture_number": 115,
+          "title": "Lec-101: Insertion in B-Tree with example in Hindi",
+          "reasoning": "Demonstrates the insertion operation in B-Trees, crucial for understanding how they maintain balance and efficiency.",
+          "confidence": 0.95,
+          "order": 9
+        },
+        {
+          "lecture_number": 116,
+          "title": "Lec-102: How to find Order of B-Tree | Imp Question on B-Tree",
+          "reasoning": "Explains how to determine the order of a B-Tree and provides important questions for practice.",
+          "confidence": 0.90,
+          "order": 10
+        },
+        {
+          "lecture_number": 117,
+          "title": "Lec-103: Difference b/w B-Tree & B+Tree in Hindi with examples",
+          "reasoning": "Introduces B+ Trees by comparing them with B-Trees, highlighting their differences and advantages.",
+          "confidence": 0.95,
+          "order": 11
+        },
+        {
+          "lecture_number": 118,
+          "title": "Lec-104: Order of B+ Tree | Order of Leaf Node & Non Leaf Node in B+Tree",
+          "reasoning": "Details the order of B+ Trees, including leaf and non-leaf nodes, providing a deeper understanding of their structure.",
+          "confidence": 0.92,
+          "order": 12
+        }
+      ]
+    }
+  ]
+}

@@ -41,48 +41,48 @@ const MatchForm: React.FC<MatchFormProps> = ({ onSubmit, isLoading }) => {
     };
 
     return (
-        <div className="form-container">
+        <div className="form-card">
+            <h2 className="form-card-title">Input</h2>
             <form onSubmit={handleSubmit} className="match-form">
                 <div className="form-group">
-                    <label htmlFor="playlistUrl" className="form-label">
-                        YouTube Playlist URL
-                    </label>
-                    <input
-                        type="text"
-                        id="playlistUrl"
-                        className={`input ${errors.playlistUrl ? 'error' : ''}`}
-                        placeholder="https://www.youtube.com/playlist?list=..."
-                        value={playlistUrl}
-                        onChange={handlePlaylistUrlChange}
-                        disabled={isLoading}
-                    />
-                    {errors.playlistUrl && (
-                        <p className="error-text">{errors.playlistUrl}</p>
-                    )}
-                    <p className="form-help">
-                        Enter the full URL of the YouTube playlist containing your lectures
-                    </p>
-                </div>
-
-                <div className="form-group">
                     <label htmlFor="syllabus" className="form-label">
-                        Syllabus Topics
+                        1. Paste Syllabus Text
                     </label>
                     <textarea
                         id="syllabus"
                         className={`input textarea ${errors.syllabus ? 'error' : ''}`}
-                        placeholder="Introduction to Databases&#10;SQL Basics&#10;Normalization&#10;Transactions and Concurrency"
+                        placeholder="e.g., Topics: Linear Regression, Gradient Descent, Neural Networks..."
                         value={syllabus}
                         onChange={handleSyllabusChange}
                         disabled={isLoading}
-                        rows={10}
+                        rows={8}
                     />
                     {errors.syllabus && (
                         <p className="error-text">{errors.syllabus}</p>
                     )}
-                    <p className="form-help">
-                        Enter one topic per line. Each topic will be matched with lectures from the playlist.
-                    </p>
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="playlistUrl" className="form-label">
+                        2. Paste YouTube Playlist URL
+                    </label>
+                    <div className="input-with-icon">
+                        <svg className="input-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 0C4.477 0 0 4.477 0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10C20 4.477 15.523 0 10 0ZM13.5 10.5L8.5 13.5V7.5L13.5 10.5Z" fill="#9CA6B8" />
+                        </svg>
+                        <input
+                            type="text"
+                            id="playlistUrl"
+                            className={`input input-with-padding ${errors.playlistUrl ? 'error' : ''}`}
+                            placeholder="https://youtube.com/playlist?list=..."
+                            value={playlistUrl}
+                            onChange={handlePlaylistUrlChange}
+                            disabled={isLoading}
+                        />
+                    </div>
+                    {errors.playlistUrl && (
+                        <p className="error-text">{errors.playlistUrl}</p>
+                    )}
                 </div>
 
                 <button
@@ -96,10 +96,7 @@ const MatchForm: React.FC<MatchFormProps> = ({ onSubmit, isLoading }) => {
                             Processing...
                         </>
                     ) : (
-                        <>
-                            <span className="btn-icon">🔍</span>
-                            Match Lectures
-                        </>
+                        'Generate Playlist'
                     )}
                 </button>
             </form>
