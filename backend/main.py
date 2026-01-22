@@ -87,7 +87,8 @@ async def match_lectures(request: MatchRequest):
 
         # AI Matching with Gemini
         print(f"Matching with AI...")
-        matches = ai_service.matched_lectures(request.syllabus_text, lectures)
+
+        matches = ai_service.match_lectures(request.syllabus_text, lectures)
         print(f"Matched {len(matches)} topics")
 
         # Build Response
@@ -208,7 +209,7 @@ if __name__ == "__main__":
     import uvicorn
 
     uvicorn.run(
-        "main: app",
+        "main:app",
         host="0.0.0.0",
         port=8000,
         reload=True, # Auto-reload on code changes
